@@ -1,0 +1,4 @@
+# Config file for yt-dlp to download files with best audio and video in mp4 m4a format
+-f 'bv+ba' -S ext:mp4:m4a 
+# Save the output to the downloads folder
+-o ~/Downloads/%(title)s.%(ext)s

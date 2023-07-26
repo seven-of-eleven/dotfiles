@@ -1,0 +1,59 @@
+# Hank
+
+spacing         = 1
+padding         = 0
+hide_ascii      = false
+prefer_small_ascii = false
+separator       = "|  "
+key_color       = "#cc5f0d"
+separator_color = "#99470A"
+
+
+[palette]
+type = "Light"
+visible = false
+glyph = "█ "
+
+[bar]
+glyph           = "■"
+symbol_open     = '['
+symbol_close    = ']'
+hide_delimiters = false
+visible         = false
+
+[box]
+title 			= " THINK DIFFERENT "
+border          = "single"
+visible         = true
+
+[box.inner_margin]
+x               = 2
+y               = 0
+
+[custom_ascii]
+color = "#cc5f0d"
+path = "~/.config/macchina/themes/apple-ascii.txt"
+
+[randomize]
+key_color       = false
+separator_color = false
+
+[keys]
+host            = "Host"
+kernel          = "Kernel"
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = "Distro"
+terminal        = "Terminal"
+shell           = "Shell"
+packages        = "Packages"
+uptime          = "Uptime"
+memory          = "Memory"
+machine         = "Machine"
+local_ip        = "Local IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "CPU Load"
+cpu             = "CPU"

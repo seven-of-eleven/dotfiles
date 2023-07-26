@@ -1,0 +1,181 @@
+format = """
+[](fg:blue)\
+$directory\
+[](fg:blue bg:green)\
+$git_branch\
+$git_status\
+[](fg:green bg:cyan)\
+$time\
+[](fg:cyan)\
+$fill\
+
+$cmd_duration\
+$memory_usage\
+$docker_context\
+
+$c\
+$dart\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nodejs\
+$nim\
+$python\
+$rlang\
+$ruby\
+$rust\
+$scala\
+
+$line_break\
+$character
+"""
+
+continuation_prompt = "[  ](blue)"
+
+[character]
+success_symbol = "[  ](bold green)"
+error_symbol = "[ ✘ ](italic red)"
+
+[directory]
+style = "fg:black bg:blue"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = " …/"
+
+[directory.substitutions]
+"~" = " ~"
+"Documents" = "  Documents"
+"Downloads" = "   Downloads"
+"Music" = "   Music"
+"Pictures" = "   Pictures"
+"Projects" = "   Projects"
+
+[git_branch]
+symbol = "  "
+style = "fg:black bg:green"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+ahead = " $count "
+behind = " $count "
+deleted = "﫧$count "
+diverged = " $count "
+stashed = " $count "
+modified = " $count "
+staged = " $count "
+renamed = " $count "
+untracked = " $count "
+style = "fg:black bg:green"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+disabled = false
+time_format = "%a, %I:%M %p" # Hour:Minute Format
+style = "fg:black bg:cyan"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+style = "yellow bold"
+format = '[  $duration]($style)'
+
+[memory_usage]
+disabled = false
+threshold = 75
+symbol = ' '
+style = 'yellow bold'
+format = '[ $symbol $ram]($style)'
+
+[docker_context]
+symbol = " "
+style = "fg:#06969A bold"
+format = '[ $symbol $context ]($style) $path'
+
+[c]
+symbol = " "
+style = "fg:#3F4347 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[dart]
+symbol = " "
+style = "fg:#3FBEF7 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:#422758 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#F0AD00 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#00ACD7 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "fg:#9C4B89 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "fg:#F0931C bold"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "fg:#CA3C32 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[kotlin]
+symbol = "🅺 "
+style = "fg:#746DDA bold"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = " "
+style = "fg:#0402A9 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:#6BA15C bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "fg:#F7E852 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "fg:#316A9A bold"
+format = '[ $symbol ($version) ]($style)'
+
+[rlang]
+symbol = "ﳒ "
+style = "fg:#2266B8 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[ruby]
+symbol = " "
+style = "fg:#B91B0B bold"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "fg:#C26F2E bold"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#D73222 bold"
+format = '[ $symbol ($version) ]($style)'
